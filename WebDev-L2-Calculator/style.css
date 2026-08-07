@@ -1,0 +1,116 @@
+/*================================
+Global calculator styles
+=================================*/
+:root {
+    --bg-color: #f8f6f6;
+    --calc-bg: #1f2937;
+    --display-bg: #111827;;
+    --text-primary: #f9fafb;
+    --text-secondary: #9ca3af;
+    --btn-default: #374151;
+    --btn-hover: #d5d5d5;
+    --btn-operator: #ff9500;
+    /*================================
+    Professional amber color for operators
+    =================================*/
+    --btn-operator-hover: #e08900;
+    --btn-clear: #ff3b30;
+    --btn-clear-hover: #e02a1f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: var(--bg-color);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* centers the calculator vertically */
+}
+
+/*================================
+Calculator container styles and display
+=================================*/
+.calculator{
+    background-color: var(--calc-bg);
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.display{
+    background-color: var(--display-bg);
+    padding: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 80px; /* ensures the display has a minimum height */
+    word-wrap: break-word; /* allows long numbers to wrap */
+    word-break: break-all; /* ensures that long numbers break properly */
+
+}
+   
+.previous-operand{
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    min-height: 24px; /* prevent layout shift when empty */
+}
+.current-operand{
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+/*================================
+Css Grid kepad style
+=================================*/
+.keypad{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px; /* creates a small gap between buttons */
+    background-color: #000; /* acts as the border color for the gaps */
+}
+
+.btn{
+    background-color: var(--btn-default);
+    color: var(--text-primary);
+    border: none;
+    padding: 20px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+    background-color: var(--btn-hover);
+}
+
+/*================================
+Operator and special button styles
+=================================*/
+/* The clear (C) button and zero (0) button span two columns */
+.btn-clear, .btn-zero{
+    grid-column: span 2;
+}
+ .btn-clear, .btn-delete{
+    background-color: var(--btn-clear);
+ }
+
+ .btn-clear:hover, .btn-delete:hover{
+    background-color: var(--btn-clear-hover);
+ }
+    .btn-operator, .btn-equals{
+    background-color: var(--btn-operator);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn-operator:hover, .btn-equals:hover{
+    background-color: var(--btn-operator-hover);
+}
