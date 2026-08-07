@@ -3,7 +3,8 @@
 This project is Task 1 of Level 2 in the Web Development and Designing track for My Oasis Infobyte (OIBSIP) Internship. It is a fully functional, browser-based calculator built to handle basic arithmetic operations with a responsive and user-friendly interface.
 
 ## 🚀 Live Demo
-*(Include a link to your hosted project here if applicable, or link to your LinkedIn demo video)*
+*([https://oibsip-cyan.vercel.app/WebDev-L2-Calculator/index.html])*
+![alt text](image.png)
 
 ## 🛠️ Tech Stack
 * **HTML5:** Semantic structure using custom `data-` attributes for clean JavaScript integration.
