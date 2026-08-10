@@ -1,0 +1,273 @@
+/* =========================================
+   1. GLOBAL VARIABLES & THEMES
+   ========================================= */
+:root {
+    /* Premium Light Theme */
+    --bg-main: #f4f4f5;
+    --bg-card: #ffffff;
+    --bg-quote: #ffffff;
+    --text-primary: #18181b;
+    --text-secondary: #52525b;
+    --accent: #b45309; 
+    --border: rgba(0, 0, 0, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] {
+    --bg-main: #09090b;
+    --bg-card: #18181b;
+    --bg-quote: #27272a; /* Added: A distinct elevated dark tone */
+    --text-primary: #fafafa;
+    --text-secondary: #a1a1aa;
+    --accent: #d4af37; 
+    --border: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(9, 9, 11, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   2. GLASSMORPHISM HEADER
+   ========================================= */
+.glass-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    color: var(--accent);
+    letter-spacing: 2px;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: transform 0.2s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
+main {
+    max-width: 900px;
+    margin: 8rem auto 4rem auto; /* Pushed down to account for fixed header */
+    padding: 0 2rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 2rem;
+}
+
+#image {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    filter: grayscale(20%);
+    transition: filter 0.4s ease;
+}
+
+#image:hover {
+    filter: grayscale(0%);
+}
+
+#title {
+    font-family: 'Merriweather', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+/* =========================================
+   4. PREMIUM CARDS & TYPOGRAPHY
+   ========================================= */
+section {
+    margin-bottom: 5rem;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.premium-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.bio-text p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.bio-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   5. QUOTE SECTION
+   ========================================= */
+.quote-section {
+    position: relative;
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--bg-quote); 
+    border-radius: 16px; 
+    border: 1px solid var(--border);
+}
+
+.tribute-quote {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--text-primary);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tribute-quote cite {
+    display: block;
+    margin-top: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    font-style: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   6. TIMELINE GRID
+   ========================================= */
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.glass-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.glass-card h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+    padding-bottom: 0.2rem;
+}
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    background: #09090b;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* =========================================
+   8. ANIMATIONS
+   ========================================= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

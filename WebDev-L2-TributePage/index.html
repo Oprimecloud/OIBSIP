@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brendan Eich | The Architect of the Interactive Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="glass-header">
+        <div class="nav-container">
+            <h1 class="logo">B.E.</h1>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero fade-in">
+            <div class="hero-image-container">
+                <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Brendan_Eich_Mozilla_Foundation_official_photo.jpg" alt="Brendan Eich">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-text">
+                <h1 id="title">Brendan Eich</h1>
+                <p class="tagline">The developer who built the interactive web in 10 days.</p>
+            </div>
+        </section>
+
+        <section class="biography fade-in">
+            <div class="premium-card">
+                <h2>The Genesis of JavaScript</h2>
+                <div class="bio-text">
+                    <p>In May 1995, the web was a static, document-driven platform. Netscape Communications realized they needed a lightweight scripting language to make the web dynamic and accessible to non-professional programmers. They hired Brendan Eich, who, in a legendary sprint of just ten days, prototyped a language initially called Mocha, later renamed to LiveScript, and finally to JavaScript.</p>
+                    <p>Eich's design choices—combining C-style syntax with first-class functions and prototype-based object orientation—created a highly flexible language that would eventually power everything from simple animations to massive single-page applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section fade-in">
+            <blockquote class="tribute-quote">
+                "If I had done class-based inheritance, it would just have been a terribly poorly thought out rip-off of C++ or Java. I liked the flexibility of prototypes."
+                <cite>— Brendan Eich</cite>
+            </blockquote>
+        </section>
+
+        <section class="timeline fade-in">
+            <h2>Key Milestones</h2>
+            <div class="timeline-grid">
+                <div class="timeline-card glass-card">
+                    <h3>1961</h3>
+                    <p>Born in Pittsburgh, Pennsylvania. Received his degree in mathematics and computer science.</p>
+                </div>
+                <div class="timeline-card glass-card">
+                    <h3>1995</h3>
+                    <p>Recruited by Netscape Communications and created JavaScript in just 10 days.</p>
+                </div>
+                <div class="timeline-card glass-card">
+                    <h3>1998</h3>
+                    <p>Co-founded the Mozilla project, building the open-source foundation for Firefox.</p>
+                </div>
+                <div class="timeline-card glass-card">
+                    <h3>2015</h3>
+                    <p>Founded Brave Software, pioneering privacy-focused browsing and digital advertising.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by Abdulmalik Solagbade for the OIBSIP Web Development Track.</p>
+        <p><a id="tribute-link" href="https://en.wikipedia.org/wiki/Brendan_Eich" target="_blank">Explore the full history on Wikipedia</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

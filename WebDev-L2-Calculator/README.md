@@ -22,6 +22,8 @@ This project is Task 1 of Level 2 in the Web Development and Designing track for
 * `index.html` - The structural markup of the calculator.
 * `style.css` - The design, utilizing CSS Grid and Flexbox.
 * `script.js` - The logic and DOM manipulation.
+* `image.png` - The visual image of the calculator
+* `README.md` - Project documentation.
 
 ## 🧠 Architecture Notes
 Instead of relying on basic global variables, the logic is encapsulated inside a `Calculator` class. This ensures the calculator's state (current operand, previous operand, and selected operation) is securely managed and updated via dedicated class methods like `compute()`, `appendNumber()`, and `updateDisplay()`.
