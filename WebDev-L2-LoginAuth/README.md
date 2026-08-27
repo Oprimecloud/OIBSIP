@@ -3,7 +3,8 @@
 This project is Task 4 of Level 2 in the Web Development and Designing track for the Oasis Infobyte (OIBSIP) Internship. It is a front-end authentication portal that demonstrates modern security practices, state management, and route protection without relying on a backend server.
 
 ## 🚀 Live Demo
-*(Insert your Vercel deployment link here once pushed)*
+*([https://oibsip-cyan.vercel.app/WebDev-L2-LoginAuth/index.html])*
+![alt text](image.png)
 
 ## 🛠️ Tech Stack & Architecture
 * **HTML5:** Dual-page architecture (`index.html` for auth, `dashboard.html` for the protected route).
