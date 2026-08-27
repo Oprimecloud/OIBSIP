@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Portal | Login & Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="auth-container">
+        <div class="auth-box">
+            
+            <!-- Login Form (Visible by Default) -->
+            <div id="login-section" class="form-section active">
+                <div class="auth-header">
+                    <h2>Welcome Back</h2>
+                    <p>Enter your credentials to access the dashboard.</p>
+                </div>
+                
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="login-username">Username or Email</label>
+                        <input type="text" id="login-username" required autocomplete="username">
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required autocomplete="current-password">
+                    </div>
+                    
+                    <!-- General error message for incorrect credentials -->
+                    <p id="login-error" class="error-msg"></p>
+                    
+                    <button type="submit" class="btn-primary">Log In</button>
+                </form>
+                
+                <p class="toggle-text">Don't have an account? <button class="btn-text" id="show-register">Register here</button></p>
+            </div>
+
+            <!-- Registration Form (Hidden by Default) -->
+            <div id="register-section" class="form-section">
+                <div class="auth-header">
+                    <h2>Create an Account</h2>
+                    <p>Join us to access the secure portal.</p>
+                </div>
+                
+                <form id="register-form">
+                    <div class="input-group">
+                        <label for="reg-username">Username</label>
+                        <input type="text" id="reg-username" required autocomplete="username">
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-email">Email Address</label>
+                        <input type="email" id="reg-email" required autocomplete="email">
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" required autocomplete="new-password">
+                        <small class="hint">Must be at least 8 characters and contain 1 number.</small>
+                    </div>
+                    
+                    <!-- Dynamic validation errors -->
+                    <p id="reg-error" class="error-msg"></p>
+                    <p id="reg-success" class="success-msg"></p>
+                    
+                    <button type="submit" class="btn-primary">Register</button>
+                </form>
+                
+                <p class="toggle-text">Already have an account? <button class="btn-text" id="show-login">Log in here</button></p>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+</body>
+</html>

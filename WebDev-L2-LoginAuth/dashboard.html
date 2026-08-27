@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Secure Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Loading overlay to prevent flash of content for unauthorized users -->
+    <div id="auth-check-overlay" class="overlay">
+        <p>Verifying session...</p>
+    </div>
+
+    <header class="dashboard-header">
+        <div class="dashboard-nav">
+            <h1>Secure Portal</h1>
+            <button id="logout-btn" class="btn-secondary">Log Out</button>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="welcome-card">
+            <h2 id="welcome-msg">Welcome, User!</h2>
+            <p>You have successfully authenticated and accessed the protected dashboard.</p>
+            
+            <div class="status-box">
+                <span class="status-indicator">🟢</span>
+                <span>Session Active</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- We use the exact same script file to handle the dashboard logic -->
+    <script src="auth.js"></script>
+</body>
+</html>
