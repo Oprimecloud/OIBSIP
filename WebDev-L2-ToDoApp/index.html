@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster | WebDev Level 2</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using Inter for a clean, modern app UI interface -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="app-container">
+        <header class="app-header">
+            <h1>TaskMaster</h1>
+            <p>Organize your workflow.</p>
+        </header>
+
+        <!-- Task Input Section -->
+        <section class="input-section">
+            <div class="input-wrapper">
+                <input type="text" id="task-input" placeholder="What needs to be done?" aria-label="New task input" autocomplete="off">
+                <button id="add-task-btn" class="btn-primary">Add Task</button>
+            </div>
+            <!-- Error message container (hidden by default) -->
+            <p id="input-error" class="error-msg"></p>
+        </section>
+
+        <!-- Task Lists Container -->
+        <div class="lists-container">
+            
+            <!-- Pending Tasks Section -->
+            <section class="task-section">
+                <header class="section-header">
+                    <h2>Pending</h2>
+                    <span id="pending-count" class="badge badge-pending">0 pending</span>
+                </header>
+                
+                <ul id="pending-list" class="task-list">
+                    <!-- Empty State Messaging -->
+                    <li class="empty-state" id="pending-empty">
+                        <span>📝</span>
+                        <p>No pending tasks. You're all caught up!</p>
+                    </li>
+                    <!-- Dynamic tasks will be injected here by JS -->
+                </ul>
+            </section>
+
+            <!-- Completed Tasks Section -->
+            <section class="task-section">
+                <header class="section-header">
+                    <h2>Completed</h2>
+                    <span id="completed-count" class="badge badge-completed">0 completed</span>
+                </header>
+                
+                <ul id="completed-list" class="task-list">
+                    <!-- Empty State Messaging -->
+                    <li class="empty-state" id="completed-empty">
+                        <span>✅</span>
+                        <p>No completed tasks yet. Let's get to work!</p>
+                    </li>
+                    <!-- Dynamic tasks will be injected here by JS -->
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
