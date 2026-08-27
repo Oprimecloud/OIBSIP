@@ -5,7 +5,7 @@ This project is Task 2 of Level 2 in the Web Development and Designing track for
 While the task only required HTML and CSS, I integrated vanilla JavaScript to deliver a highly interactive and modern user experience.
 
 ## 🚀 Live Demo
-![text](https://oibsip-asud.vercel.app/WebDev-L2-TributePage/index.html)
+[(https://oibsip-asud.vercel.app/WebDev-L2-TributePage/index.html)]
 ![image](image.png)
 
 ## 🛠️ Tech Stack & Architecture
